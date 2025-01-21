@@ -6,7 +6,7 @@ import Winter from './assets/winter.jpg';
 import Cloudy from './assets/cloudy.jpg';
 import Rainy from './assets/rainny.jpg';
 import Sunny from './assets/sunny.jpg';
-import Spring from './assets/spring.jpg';
+import Spring from './assets/spring3.jpg';
 
 const cardWeather = [
   {
@@ -69,6 +69,10 @@ function App() {
     }
   };
 
+  const handleRandom = () => {
+    const randomIndex = Math.floor(Math.random() * cardWeather.length);
+    setCurrentIndex(randomIndex);
+  }
   return (
     <>
     <h1 className='head'>{cardWeather[currentIndex].cityName} Weather</h1>
@@ -80,11 +84,11 @@ function App() {
         image={cardWeather[currentIndex].image}
       />
       <div className='buttons'>
-        <button onClick={handlePrev} disabled={currentIndex === 0} className="button">
+        <button onClick={handlePrev || handleRandom} disabled={currentIndex === 0} className="button">
           Prev
         </button>
         <button
-          onClick={handleNext}
+          onClick={handleNext || handleRandom}
           disabled={currentIndex === cardWeather.length - 1}
           className="button"
         >

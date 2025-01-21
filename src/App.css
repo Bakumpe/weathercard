@@ -14,7 +14,7 @@ body{
   text-align: center;
   padding: 10px;
   gap: 20px;
-  color: #453d3d;
+  color: #232020;
 }
 .card{
   width: 100%;
@@ -26,6 +26,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #f1f1f1;
 }
 .card img{
   width: 100%;
@@ -66,9 +67,28 @@ body{
   border-radius: 20px;
   margin-top: 10%;
   font-size: 18px;
-  font-size: 1em;
+  font-size: 1.3em;
   width: 50%;
-  color: #453d3d;
+  color: #1f1e1e;
   background-color: rgba(255, 255, 255, 0.5);
   text-wrap: wrap;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #f1f1f1;
+}
+button:hover {
+  border-color: #ceced9;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
